@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurent</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+        #spinner {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="header">
+        <nav class="p-5 md:flex md:items-center md:justify-between text-white">
+            <div class="flex justify-between items-center ">
+                <span class="text-4xl cursor-pointer text-orange-400">
+                    FoodVillege
+                </span>
+
+                <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+                    <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+                </span>
+            </div>
+
+            <ul
+                class="md:flex md:items-center z-2 md:z-3 md:static absolute  w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 ">
+                <li class="mx-4 my-6 md:my-0">
+                    <a href="#" class="text-xl hover:text-cyan-500 duration-500">HOME</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a href="#" class="text-xl hover:text-cyan-500 duration-500">Dishes</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a href="#" class="text-xl hover:text-cyan-500 duration-500">ABOUT</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a href="#" class="text-xl hover:text-cyan-500 duration-500">CONTACT</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a href="#" class="text-xl hover:text-cyan-500 duration-500">BLOG</a>
+                </li>
+
+            </ul>
+        </nav>
+        <div class="text-box z-1">
+            <h1 class="md:text-6xl text-4xl">Special dishes</h1>
+            <p class="text-xl px-2 my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolorum
+                excepturi enim voluptas
+                quas
+                deleniti tempore voluptates eum fugiat! Magni vitae omnis laudantium. Saepe dolores, animi non
+                recusandae qui quibusdam?</p>
+            <button class="bg-orange-500 px-4 py-2 rounded">Read More</button>
+
+        </div>
+    </section>
+
+    <section>
+        <h1 class="text-4xl w-40 mx-auto font-bold my-5">Category</h1>
+        <div class="flex flex-wrap w-3/4 gap-2 mx-auto my-5 justify-center">
+            <button onclick="breakfast()"
+                class="bg-orange-400 hover:bg-amber-400 text-white px-6 py-2 rounded">Breakfast</button>
+            <button onclick="Vegetarian()"
+                class="bg-orange-400 hover:bg-amber-400 text-white px-6 py-2 rounded">Vegetarian</button>
+            <button onclick="allDishes()" class="bg-orange-400 hover:bg-amber-400 text-white px-6 py-2 rounded">All
+                Dishes</button>
+        </div>
+    </section>
+
+    <section>
+        <div class="show-dishes grid lg:grid-cols-3 grid-cols-1  gap-5 my-5" id="showDishes">
+
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="text-center pt-1/2">
+                <small>© 2020 bike. All rights reserved</small>
+            </div>
+        </div>
+
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
